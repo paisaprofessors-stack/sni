@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff4f1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>A Little Gift</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260627">
+</head>
+<body>
+  <div class="site-shell" id="siteShell">
+    <div class="ambient-layer" id="ambientLayer" aria-hidden="true"></div>
+
+    <main>
+      <!-- Password gate -->
+      <section class="screen password-screen is-active" id="passwordScreen" aria-labelledby="passwordTitle">
+        <div class="password-card" id="passwordCard">
+          <div class="password-glints" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <p class="eyebrow">A little surprise for you</p>
+          <h1 id="passwordTitle">Enter the secret password</h1>
+          <form class="password-form" id="passwordForm" novalidate>
+            <label class="sr-only" for="passwordInput">Secret password</label>
+            <div class="password-input-wrap">
+              <span class="password-key" aria-hidden="true"></span>
+              <input
+                id="passwordInput"
+                name="password"
+                type="password"
+                autocomplete="off"
+                placeholder="Secret password"
+                aria-describedby="passwordHint passwordError"
+              >
+            </div>
+            <button class="primary-button" type="submit">
+              <span class="button-label">Unlock</span>
+              <span class="button-arrow" aria-hidden="true"></span>
+            </button>
+          </form>
+          <p class="hint" id="passwordHint">The password is something only this gift knows.</p>
+          <p class="error-message" id="passwordError" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <!-- Unlock animation -->
+      <section class="screen unlock-screen" id="unlockScreen" aria-labelledby="unlockTitle" hidden>
+        <div class="unlock-aurora" aria-hidden="true"></div>
+        <div class="unlock-glow" aria-hidden="true"></div>
+        <div class="unlock-rings" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="unlock-ribbons" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="unlock-particles" id="unlockParticles" aria-hidden="true"></div>
+        <div class="heart-bloom" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="envelope-stage" aria-hidden="true">
+          <div class="envelope">
+            <div class="envelope-back"></div>
+            <div class="envelope-letter"></div>
+            <div class="envelope-flap"></div>
+            <div class="envelope-front"></div>
+            <div class="envelope-seal"></div>
+          </div>
+        </div>
+        <div class="unlock-copy">
+          <h2 id="unlockTitle">Opening something special&hellip;</h2>
+        </div>
+      </section>
+
+      <!-- Personal letter -->
+      <section class="letter-screen" id="letterScreen" aria-labelledby="letterTitle" hidden>
+        <article class="letter-card" id="letterCard" tabindex="-1">
+          <div class="letter-sparkles" id="letterSparkles" aria-hidden="true"></div>
+          <div class="letter-ribbon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <h2 class="sr-only" id="letterTitle">Private note</h2>
+          <div class="letter-content" id="letterContent" aria-live="polite"></div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js?v=20260627"></script>
+</body>
+</html>
